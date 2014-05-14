@@ -76,40 +76,41 @@ end
 
 
 # Your Refactored Solution
-def north_korean_cipher(coded_message) 
-  input = coded_message.downcase.split("") 
+def north_korean_cipher(coded_message)
+  input = coded_message.downcase.split("") # Check out this method in IRB to see how it works! Also refer to the ruby docs.
   decoded_sentence = []
   cipher = ('a'..'z').to_a.rotate(4) 
-
-  input.each do |x| #  
-    found_match = false  # 
-    cipher.each_key do |y| # 
- if x == y  # What is this comparing? this is comparing the key and value pairs for a match.  Where is it getting x? user input. Where is it getting y? cipher key- value What are those variables really? keys and values of a hash 
-        puts "I am comparing x and y. X is #{x} and Y is #{y}." #printing a string if x == y that encrypts their true message
-        decoded_sentence << (('a'..'z').to_a)[cipher.index(y)]#when a match is found, the y value is added to the decoded sentence. 
-        found_match = true #while iterating, found_match will return true if it finds a match 
-        break  # Why is it breaking here? the code found a match and we need to move on to the next letter to be decrypted. 
-      elsif x == "@" || x == "#" || x == "$" || x == "%"|| x == "^" || x == "&"|| x =="*" #What the heck is this doing? if the iteration searches for alphabetical characters and cannot find any, it will search for special characters such as: $, @, etc. 
-        decoded_sentence << " " # if it finds a match it will append a space to the decoded message 
-        found_match = true 
-        break
-      elsif (0..9).to_a.include?(x) # Try this out in IRB. What does   " (0..9).to_a "    do? evaluating numerical characters
-        decoded_sentence << x #add this match to the end of the decoded sentence 
+            
+  input.each do |x| # What is #each doing here?
+    found_match = false  # Why would this be assigned to false from the outset? What happens when it's true?
+    cipher.each do |y| # What is #each_key doing here?
+      if x == y  # What is this comparing? Where is it getting x? Where is it getting y? What are those variables really?
+        puts "I am comparing x and y. X is #{x} and Y is #{y}."
+        decoded_sentence << (('a'..'z').to_a)[cipher.index(y)] #cipher[y]
         found_match = true
-        break #breaks end the loop once we find a match 
+        break  # Why is it breaking here?
+      elsif x == "@" || x == "#" || x == "$" || x == "%"|| x == "^" || x == "&"|| x =="*" #What the heck is this doing?
+        decoded_sentence << " "
+        found_match = true
+        break
+      elsif (0..9).to_a.include?(x) # Try this out in IRB. What does   " (0..9).to_a "    do?
+        decoded_sentence << x
+        found_match = true
+        break
       end 
     end
-    if not found_match  # What is this looking for? this is looking for a match.  
-      decoded_sentence << x #if we don't find a match, this will append the character that it was trying to match onto the end of the sentence
+    if not found_match  # What is this looking for?
+      decoded_sentence << x
     end
   end
-  decoded_sentence = decoded_sentence.join("") #when we broke apart the string on line 15, we are simply rejoining it here based on our iterations 
+  decoded_sentence = decoded_sentence.join("")
  
-  if decoded_sentence.match(/\d+/) #What is this matching? this is matching a digit character ([0-9]) 
-    decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 } #He's been known to exaggerate... if there is a match, substitute in for it an integer divided by 100
+  if decoded_sentence.match(/\d+/) #What is this matching? Look at Rubular for help. 
+    decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 } #He's been known to exaggerate...
   end  
-  return decoded_sentence # What is this returning?  it is returning a decrypted message: "can somebody just get me 100 bags of cool ranch doritos?"       
+  return decoded_sentence # What is this returning?        
 end
+
 
 
 
@@ -121,9 +122,6 @@ p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr
 p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.")
 p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!")
 p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?")
-
-
-
 
 # Reflection
 =begin
