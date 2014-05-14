@@ -79,7 +79,7 @@ end
 def north_korean_cipher(coded_message) 
   input = coded_message.downcase.split("") 
   decoded_sentence = []
-  cipher = ('a'..'z').to_a.rotate(-4) 
+  cipher = ('a'..'z').to_a.rotate(4) 
 
   input.each do |x| #  
     found_match = false  # 
