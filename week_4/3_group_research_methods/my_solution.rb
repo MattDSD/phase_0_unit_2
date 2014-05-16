@@ -50,16 +50,22 @@ end
 
 # Person 4
 def my_array_deletion_method(source, thing_to_delete)
-  #Your code here!
+  delete_these = source.grep (/#{thing_to_delete}/)
+  source - delete_these
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.delete_if{|key, value| key == thing_to_delete}
 end
 
+
+
+
 # Identify and describe the ruby method you implemented. 
-# 
-#
+# I implemented grep, which iterates over the array to search for what I need searched 
+# At that point, I was able to delete whatever I wanted. 
+## on my_hash_deletion_method I implemented delete_if, which allowed me to delete the word or string 
+# if there is a match. 
 #
 
 
@@ -78,8 +84,10 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
+# I had a great time completing this challenge.  It was interesting to see how all of our solutions tie together. 
+# I researched methods that would help me accomplish my goal and I think I found some options that are pretty clean. 
+# I will come back to this code once the final person has completed their challenge and see how it all ties together. 
+# I am happy to learn two additional methods on my own in addition to everyone elses methods that they taught me.
 # 
-# 
-# 
-# 
-# 
+
+# Great experience and a great exercise! 
