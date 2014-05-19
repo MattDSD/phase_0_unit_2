@@ -3,7 +3,7 @@
 
 # I worked on this challenge [, with: Arik ].
 
-# 2. Pseudocode
+# 2. Pseudocode.
 
 # Input: putting in a number of sides
 # Output: Getting a random number 

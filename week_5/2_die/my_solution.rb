@@ -1,7 +1,7 @@
-# U2.W5: Die Class 2: Arbitrary Symbols
+# U2.W5: Die Class 2: Arbitrary Symbols.
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself, with: arik Gadye ].
 
 # 2. Pseudocode
 
@@ -69,7 +69,9 @@ die.roll # [1,2,3,4,5,6][rand(die.sides) + 1] => [1,2,3,4,5,6][rand(6) + 1]
 
 # 5. Reflection 
 =begin 
-After this exercise, I have 
+After this exercise, I have a better understanding of how to write test code, clean up existing code to make it 
+more readable and reusable.  I am finally starting to also develop a better understanding 
+of instance variables and classes.
 
 
 =end 
