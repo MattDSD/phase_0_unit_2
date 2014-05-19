@@ -1,6 +1,6 @@
 # U2.W5: A Nested Array to Model a Boggle Board
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself, with: Puru Dahal].
 
 boggle_board = [["b", "r", "a", "e"],
                 ["i", "o", "d", "t"],
@@ -78,3 +78,6 @@ end
 p column board,1 #=> ["b","i","e","t"]
 
 # Reflection 
+# This was a challenging problem for me.  I had to mostly learn from Puru on this one.  We learned a lot about 
+# iterating through a nested array.  I feel slightly more comfortable with this material by the end. 
+# I need to go back and read this material more thoroughly in Well Grounded Rubyist just to solidify the material. 
