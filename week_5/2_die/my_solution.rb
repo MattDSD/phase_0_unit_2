@@ -5,23 +5,49 @@
 
 # 2. Pseudocode
 
-# Input:
-# Output:
+# Input: takes an array as input 
+# Output: returns a random value on a random side of the die 
 # Steps:
-
+# What does the roll method do?
+# returns a random element in the array @labels
+# Steps: 
+# Randomly return a character on a random side of the die 
+# Define the roll variable
+# generate a random variable using our sides method
+# call random on @labels.length 
 
 # 3. Initial Solution
 
 class Die
+  
+  # if the array of strings is empty raise an argument error saying no bueno
+  # initializing 'labels' 
+  
   def initialize(labels)
+    raise ArgumentError if labels.empty?
+    @labels = labels
   end
 
   def sides
+    return @labels.length
   end
 
-  def roll
-  end
-end
+  
+# What does the roll method do?
+# returns a random element in the array @labels
+# Steps: 
+# Randomly return a character on a random side of the die 
+# Define the roll variable
+# generate a random variable using our sides method
+# call random on @labels.length 
+
+# @labels => [1,2,3,4,4] 
+
+# @labels[]
+def roll 
+   @labels[rand(@labels.length) + 1]
+end 
+  
 
 
 
@@ -34,9 +60,16 @@ end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
-
+die = Die.new([1,2,3,4,5,6])
+die.sides # 6
+die.roll # [1,2,3,4,5,6][rand(die.sides) + 1] => [1,2,3,4,5,6][rand(6) + 1]
 
 
 
 
 # 5. Reflection 
+=begin 
+After this exercise, I have 
+
+
+=end 

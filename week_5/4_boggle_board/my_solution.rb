@@ -13,12 +13,19 @@ boggle_board = [["b", "r", "a", "e"],
 # Pseudocode
 
 # Initial Solution
+def create_word(boogle_board, *coords)
+  coords.map { |coord| boggle_board[coord.first][coord.last]}.join("")
+end
 
+puts create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])  #=> returns "code"  
+puts create_word(boggle_board, [0,1], [0,2], [1,2])  #=> returns "rad"
 
 # Refactored Solution
 
 
+
 # DRIVER TESTS GO BELOW THIS LINE
+p create_word(boggle_board, [0,0], [1,1], [0,2], [1,3])  == "boat" 
 
 
 # Reflection 
@@ -30,13 +37,17 @@ boggle_board = [["b", "r", "a", "e"],
 # Pseudocode
 
 # Initial Solution
-
+def row board,n
+	return board[n-1]
+end
 
 # Refactored Solution
-
+def row board,n
+	board[n-1]
+end
 
 # DRIVER TESTS GO BELOW THIS LINE
-
+p row board,2 = ["i", "o", "d", "t"] #true
 
 # Reflection 
 
@@ -49,12 +60,21 @@ boggle_board = [["b", "r", "a", "e"],
 # Pseudocode
 
 # Initial Solution
+ def column board, n
+ 	answer = []
+ 	board.each do |a|
+ 		answer << a[n-1]
+ 	end
+ 	answer 
+ end 
 
 
 # Refactored Solution
-
+def column board, n
+	board.map{|a| a[n-1]}
+end 
 
 # DRIVER TESTS GO BELOW THIS LINE
-
+p column board,1 #=> ["b","i","e","t"]
 
 # Reflection 
