@@ -69,7 +69,12 @@ die.roll # [1,2,3,4,5,6][rand(die.sides) + 1] => [1,2,3,4,5,6][rand(6) + 1]
 
 # 5. Reflection 
 =begin 
-After this exercise, I have 
+# 5. Reflection 
+=begin 
+After this exercise, I have a better understanding of how to write test code, clean up existing code to make it 
+more readable and reusable.  I am finally starting to also develop a better understanding 
+of instance variables and classes.
 
 
+=end 
 =end 
