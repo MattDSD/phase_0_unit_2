@@ -5,9 +5,11 @@
 
 # 2. Pseudocode
 
-# Input:
-# Output:
-# Steps:
+# Input: an integer 
+# Output: a string stating whether or not your guess was correct 
+# Steps: Create a class, initialize our instance variables, define guess and create scenarios for guesses
+# Create a variable if the correct answer is solved 
+# Write test code and run it 
 
 
 # 3. Initial Solution
@@ -66,7 +68,9 @@ p game.guess(50) == :high
 
 # 5. Reflection 
 =begin 
-
+This was a good exercise for me to try it.  It was interesting learning more about classes and how to use them. 
+It was also interesting to write my own test code and learn about how to use instance variables. 
+Exercise took me a couple tries to get working.  
 
 
 
