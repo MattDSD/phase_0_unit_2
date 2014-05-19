@@ -3,7 +3,17 @@
 # I worked on this challenge [by myself, with: ].
 
 # EXPLANATION OF require_relative
-#
+## Class VirusPredictor takes 5 parameters. They are called in driver codes, and
+# passed values in hash.  The output is the number of people that will die from 
+#an outbreak.
+
+# Explaining require_relative
+#  requires that a ruby file called state_data' exists. This allows the 
+# code to access that file
+
+# Explaining state_data file
+# The file state_data has one object in it.  The object is a hash that is written in literal 
+# notation.  It gives key and value pairs for the state/population information. 
 #
 require_relative 'state_data'
 
@@ -22,7 +32,7 @@ class VirusPredictor
     speed_of_spread(@population_density, @state)
   end
 
-  private  #what is this?  what happens if it were cut and pasted above the virus_effects method
+  private  #what is this? Private signifies that you can only call it from the calling object. what happens if it were cut and pasted above the virus_effects method -that method would become private
 
   def predicted_deaths(population_density, population, state)
     if @population_density >= 200
@@ -41,7 +51,8 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread(population_density, state) #defining speed of spread using population density and state 
+    #Measuring pop density and how quickly a virus would spread in months 
     speed = 0.0
 
     if @population_density >= 200
