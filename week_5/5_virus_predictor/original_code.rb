@@ -102,4 +102,10 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread]) 
 alaska.virus_effects 
 
+#Reflection
+#This was a great exercise.  I paired with Puru on half of the exercise and created the method on my own 
+#we used this exercise to talk about how the methods were all set up and learn a bit about private methods. 
+#the method that I created allowed me to interate through the state data information and iterate through each state. 
+
+
 ,
