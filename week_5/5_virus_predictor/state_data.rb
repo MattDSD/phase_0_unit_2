@@ -1,6 +1,16 @@
 #population density is number of people per square mile as of 2012
 #this data is updated every year with estimates from a 10 year census 
 
+#What is going on with this hash? This hash is giving us all of that data that will be used
+#  in the file origingal_code.rb.  This has is presenting us with population information and regional
+#  spread information 
+#What does it have in it? This hash has other hashes inside of it.  With each hash comes 4 key:value pairs.
+#  Within the state data we use symbols to create our key/value pairs.
+
+#What's the difference?
+        # First hash's key is string, while the other hash within the main hash is symbol. The hashes with : (colon) can 
+        # only be difined if the keys are symbols. 
+
 
 STATE_DATA = {  "Alabama" => {population_density: 94.65, population: 4822023, region: 5, regional_spread: 3},
                 "Alaska" => {population_density: 1.1111, population: 731449, region: 10, regional_spread: 9},

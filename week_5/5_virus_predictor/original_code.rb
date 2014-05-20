@@ -20,20 +20,26 @@ require_relative 'state_data'
 class VirusPredictor
 
   def initialize(state_of_origin, population_density, population, region, regional_spread)
-    @state = state_of_origin
-    @population = population
+    @state = state_of_origin # this method will initialize all instance variables and pass through 
+    @population = population # all arguments that will be used throughout class VirusPredictor
     @population_density = population_density
     @region = region
     @next_region = regional_spread
   end
 
-  def virus_effects  #HINT: What is the SCOPE of instance variables?
+  # this method defines the effects of the virus in terms of predicted deaths and how quickly it will spread using population density. 
+  def virus_effects  #HINT: What is the SCOPE of instance variables? # These instance variables can be used anywhere in this class. 
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
-  private  #what is this? Private signifies that you can only call it from the calling object. what happens if it were cut and pasted above the virus_effects method -that method would become private
+  private  #what is this? all methods that follow will be made private: not accessible for outside objects.
+  #what happens if it were cut and pasted above the virus_effects method -that method would become private
+  # the methods below it would not be able to be invoked outside of this class. 
 
+  #this method determines how many deaths will be predicted if a virus outbreaks.  This method first determines the 
+  #the size of the population density and then determines the magnitude of the damage that will be caused depending on density. 
+  # we use the floor method in this variable which returns the largest integer equal to the float. 
   def predicted_deaths(population_density, population, state)
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -73,6 +79,11 @@ class VirusPredictor
 
 end
 
+## This is a new method that allows us to iterate over each state
+STATE_DATA.each do |state, information|
+  VirusPredictor.new(state, information[:population_density], information[:population], information[:region], information[:regional_spread]).virus_effects
+end
+
 #=======================================================================
 
 # DRIVER CODE
@@ -89,4 +100,6 @@ california = VirusPredictor.new("California", STATE_DATA["California"][:populati
 california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread]) 
-alaska.virus_effects
+alaska.virus_effects 
+
+,

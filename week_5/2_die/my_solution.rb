@@ -69,6 +69,11 @@ die.roll # [1,2,3,4,5,6][rand(die.sides) + 1] => [1,2,3,4,5,6][rand(6) + 1]
 
 # 5. Reflection 
 =begin 
+<<<<<<< HEAD
+=======
+# 5. Reflection 
+=begin 
+>>>>>>> 86e45d9cd695c156d07beb4baf22a85d74290fce
 After this exercise, I have a better understanding of how to write test code, clean up existing code to make it 
 more readable and reusable.  I am finally starting to also develop a better understanding 
 of instance variables and classes.
