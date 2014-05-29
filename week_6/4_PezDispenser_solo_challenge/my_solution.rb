@@ -14,16 +14,44 @@
 #      of the flavors coming up.
 
 
+
+
 # 2. Pseudocode
+
+
+#new method that inializes a new dispener
+#new method that shows the number of pez left in the dispenser
+#new method that allows user to remove from dispenser
+#new method that allos use to add
+#new method that allows user to see the items in dispenser
+
 
 
 
 # 3. Initial Solution
 
 class PezDispenser
- 
-# your code here!
- 
+ 	
+ 	def initialize flavors
+ 		@dispenser = flavors
+ 	end
+
+ 	def pez_count
+ 		p @dispenser.length
+ 	end
+
+ 	def get_pez 
+ 		@dispenser.pop
+ 	end
+
+ 	def add_pez flavor
+ 		@dispenser << flavor
+ 	end
+
+ 	def see_all_pez
+ 		p @dispenser
+ 	end
+
 end
  
 
@@ -52,4 +80,13 @@ puts "Now you have #{super_mario.pez_count} pez!"
 
 
 
+
+
 # 5. Reflection 
+=begin
+This exercise seems like good exposure for getting used to the world of development.  When working
+with others, it seems that we will have to use user stories to create pseudocode and code from the stories.
+This test seems like a great way to get exposure to that. I struggled for a bit with this exercise 
+Just like I do on almost every exercise.  Nonetheless, I feel that my skills are gradually improving. 	
+
+=end 
