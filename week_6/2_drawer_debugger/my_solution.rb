@@ -94,9 +94,19 @@ fork.eat
 
 # DRIVER TESTS GO BELOW THIS LINE
 
-
-
+silverware_test = Silverware.new("test")
+drawer_test = Drawer.new
+p drawer_test.view_contents == true 
+p drawer_test.close == false 
+p silverware_test.clean_silverware == true 
 
 
 
 # 5. Reflection 
+=begin 
+This exercise seems very similar to several of the others.  It allowed me to 
+better analyze the code and create tests to run the code. 
+
+This exercise was fairly straight to the point, so I have very little 
+to reflect on. 
+=end 
